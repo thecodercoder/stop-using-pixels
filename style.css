@@ -1,0 +1,166 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0c081b;
+  color: #fff;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-color: var(--text-gradient1);
+  background-image: linear-gradient(
+    94deg,
+    hsl(174, 100%, 50%) 5%,
+    hsl(256, 100%, 59%) 50%,
+    hsl(304, 100%, 50%) 70%
+  );
+  width: fit-content;
+}
+
+.em-example h1 {
+  background-image: linear-gradient(
+    94deg,
+    hsl(131, 100%, 57%) 5%,
+    hsl(181, 100%, 59%) 50%,
+    hsl(235, 100%, 60%) 70%
+  );
+}
+
+h1.px {
+  font-size: 32px;
+}
+
+p.px {
+  font-size: 16px;
+}
+
+h1.rem {
+  font-size: 2rem;
+}
+
+h2.rem {
+  font-size: 1.5rem;
+}
+
+h3.rem {
+  font-size: 1.2rem;
+}
+
+p.rem {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+p.em {
+  font-size: 1em;
+}
+
+h1.vw {
+  font-size: 6vw;
+}
+
+p.vw {
+  font-size: 3vw;
+}
+
+/* Sidebar */
+
+body.has-sidebar {
+  display: grid;
+  gap: 2rem;
+  /* grid-template-columns: 1fr 300px; */
+  grid-template-columns: 1fr 18.75rem;
+}
+
+/* 62.5em = 1000px */
+
+@media (width < 62.5em) {
+  body.has-sidebar {
+    grid-template-columns: 1fr;
+  }
+}
+
+body.has-sidebar aside {
+  background: linear-gradient(
+    45deg,
+    hsl(264, 100%, 36%) 30%,
+    hsl(180, 99%, 40%)
+  );
+  color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+body.has-sidebar p {
+  font-size: 1rem;
+}
+
+/* CARDS */
+body.has-cards {
+  padding: 1rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  /* 240px */
+
+  max-width: 62.5rem; /* 1000px */
+  margin-inline: auto;
+  margin-block: 2rem;
+}
+
+.cards.rem {
+  gap: 2rem; /* 32px */
+}
+
+.cards.rem .card {
+  padding: 1.5rem; /* 24px */
+  border-radius: 0.875rem; /* 14px */
+  background: linear-gradient(
+    45deg,
+    hsl(264, 100%, 36%) 30%,
+    hsl(180, 99%, 40%)
+  );
+}
+
+.cards.px {
+  gap: 32px;
+}
+
+.cards.px .card {
+  padding: 24px;
+  border-radius: 14px;
+  background: linear-gradient(
+    45deg,
+    hsl(270, 100%, 32%) 40%,
+    hsl(299, 99%, 40%)
+  );
+}
+
+.card {
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.card p {
+  margin-bottom: 0;
+}

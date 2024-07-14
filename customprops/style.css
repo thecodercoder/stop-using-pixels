@@ -1,0 +1,60 @@
+:root {
+  --16px: 1rem;
+  --24px: 1.5rem;
+  --32px: 2rem;
+  --300px: 18.75rem;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #202020;
+  color: #fff;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1.rem {
+  font-size: var(--32px);
+}
+
+h2.rem {
+  font-size: var(--24px);
+}
+
+p.rem {
+  font-size: var(--16px);
+  margin-bottom: var(--24px);
+}
+
+body.has-sidebar {
+  display: grid;
+  gap: var(--32px);
+  grid-template-columns: 1fr var(--300px);
+}
+
+@media (width < 62.5em) {
+  body.has-sidebar {
+    grid-template-columns: 1fr;
+  }
+}
+
+body.has-sidebar aside {
+  background-color: rgb(60, 12, 183);
+  color: #fff;
+  padding: var(--16px);
+}
